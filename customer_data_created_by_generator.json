@@ -1,0 +1,187 @@
+[
+  {
+    "_id": "6022872f3cc44130ad36cbdb",
+    "index": 0,
+    "guid": "b0182ddc-b851-4722-99d7-f8c89601a99f",
+    "isActive": true,
+    "age": 24,
+    "name": "West Kline",
+    "gender": "male",
+    "company": "QUINTITY",
+    "email": "westkline@quintity.com",
+    "registered": "2019-07-30T11:06:15 -09:00",
+    "tags": [
+      "magna",
+      "laborum",
+      "do",
+      "laborum",
+      "laborum",
+      "consectetur",
+      "esse"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Ashley Berg"
+      },
+      {
+        "id": 1,
+        "name": "Maryellen Golden"
+      },
+      {
+        "id": 2,
+        "name": "Rodgers Saunders"
+      }
+    ],
+    "greeting": "Hello, West Kline! You have 9 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "6022872fd198976126ab2f0f",
+    "index": 1,
+    "guid": "5b2e9c3f-55ca-4657-b25e-83fad76b16db",
+    "isActive": true,
+    "age": 31,
+    "name": "Lucy Emerson",
+    "gender": "female",
+    "company": "PLUTORQUE",
+    "email": "lucyemerson@plutorque.com",
+    "registered": "2020-11-15T11:38:57 -09:00",
+    "tags": [
+      "esse",
+      "et",
+      "culpa",
+      "id",
+      "sit",
+      "enim",
+      "adipisicing"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Maggie Vance"
+      },
+      {
+        "id": 1,
+        "name": "Alana Bowers"
+      },
+      {
+        "id": 2,
+        "name": "Moss Floyd"
+      }
+    ],
+    "greeting": "Hello, Lucy Emerson! You have 3 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "6022872f7421d1adcbfa7971",
+    "index": 2,
+    "guid": "e7aea884-5755-4c9e-b595-fb90f27ce27d",
+    "isActive": true,
+    "age": 33,
+    "name": "Guzman Erickson",
+    "gender": "male",
+    "company": "SLUMBERIA",
+    "email": "guzmanerickson@slumberia.com",
+    "registered": "2014-05-03T12:34:10 -09:00",
+    "tags": [
+      "ad",
+      "in",
+      "veniam",
+      "consequat",
+      "commodo",
+      "minim",
+      "quis"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Ladonna Parsons"
+      },
+      {
+        "id": 1,
+        "name": "Christy Giles"
+      },
+      {
+        "id": 2,
+        "name": "Megan Blake"
+      }
+    ],
+    "greeting": "Hello, Guzman Erickson! You have 4 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "6022872f3114c5d01cb85199",
+    "index": 3,
+    "guid": "580cf7aa-7869-4c01-9dcd-dab63ca8df20",
+    "isActive": false,
+    "age": 39,
+    "name": "Roberson Tucker",
+    "gender": "male",
+    "company": "ACCEL",
+    "email": "robersontucker@accel.com",
+    "registered": "2016-05-03T04:08:57 -09:00",
+    "tags": [
+      "Lorem",
+      "amet",
+      "esse",
+      "est",
+      "eiusmod",
+      "proident",
+      "elit"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Weber Vincent"
+      },
+      {
+        "id": 1,
+        "name": "Malinda Wheeler"
+      },
+      {
+        "id": 2,
+        "name": "Eloise Bruce"
+      }
+    ],
+    "greeting": "Hello, Roberson Tucker! You have 9 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "6022872ff42ab5e0dc1b21e3",
+    "index": 4,
+    "guid": "6078a4ee-2fd4-49c8-9e68-c2f83d0b6bce",
+    "isActive": true,
+    "age": 20,
+    "name": "Castro Hancock",
+    "gender": "male",
+    "company": "ACIUM",
+    "email": "castrohancock@acium.com",
+    "registered": "2017-04-20T11:26:59 -09:00",
+    "tags": [
+      "cupidatat",
+      "ullamco",
+      "est",
+      "sint",
+      "enim",
+      "quis",
+      "incididunt"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Holmes Warren"
+      },
+      {
+        "id": 1,
+        "name": "Lawson Oliver"
+      },
+      {
+        "id": 2,
+        "name": "Hayes Gilmore"
+      }
+    ],
+    "greeting": "Hello, Castro Hancock! You have 5 unread messages.",
+    "favoriteFruit": "strawberry"
+  }
+]
