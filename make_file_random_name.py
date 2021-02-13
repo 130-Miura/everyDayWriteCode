@@ -22,17 +22,24 @@
 
 import random
 
-r = random.randint(1, 100)
+r = random.randint(1, 2)
 
 # ファイル名の生成
 path = 'open_test/open_func' + str(r) + '.txt'
+def make_file_random_name(path):
+    try:
+        # ファイルが存在しない場合、ファイルを作成
+        f = open(path, 'x', encoding='utf-8')
+        f.close()
+        return [0]
 
-try:
-    # ファイルが存在しない場合、ファイルを作成
-    f = open(path, 'x', encoding='utf-8')
-    f.close()
+    # ファイルが存在する場合、エラーメッセージを出力する
+    except FileExistsError:
+        return [1, 'ファイルが存在します。\n新規ファイルが作成できませんでした。\n']
 
-# ファイルが存在する場合、エラーメッセージを出力する
-except FileExistsError:
-    print('ファイルが存在します。\n新規ファイルが作成できませんでした。\n')
+# ファイル作成の実行
+result = make_file_random_name(path)
 
+# エラー発生時、エラー内容を出力する
+if result[0] == 1:
+    print(result[1])
