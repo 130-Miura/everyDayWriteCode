@@ -1,37 +1,16 @@
-# 二分探索
+# 同一の要素「i」がj個並んだリストを作成する
+# @i 要素とする値
+# @j int 要素数
+def make_list_in_i(i, j):
+    result = [i]*j
+    return result
 
-# 二分探索を利用して目的の数値が格納してある、リストの引数を返す
-# @numbers_list 数値を格納したリスト
-# @target 探したい数値
-# @return 目的の数値が格納された引数、または-1
-def binary_search(numbers_list, target):
+list1 = make_list_in_i(0, 9)
+list2 = make_list_in_i('t', 9)
 
-    # リストの中身を昇順に並べ替え
-    l = sorted(numbers_list)
+# iからjまでの数値を要素としたリストを作成する
+def make_list_stairs(i, j):
+    result =[x for x in range(i, j)]
+    return result
 
-    left = 0
-    right = len(l) - 1
-
-    while left <= right:
-        middle = (right + left) // 2
-
-        # 中間にある数値を目的の数値を比較し、等しければその数値を返す
-        if target == l[middle]:
-            return middle
-
-        if target < l[middle]:
-            right = middle - 1
-
-        if target > l[middle]:
-            left = middle + 1
-
-    # 目的の数値が発見できずに繰り返しを終了した場合、-1を返す
-    return -1
-
-l = [1, 4, 2, 5, 6, 9, 10, 11, 12, 13]
-
-result = binary_search(l, 9)
-if result >= 0:
-    print(f'{result}番目の引数が目的の数値です')
-else:
-    print(f'目的の数値はありません')
+list3 = make_list_stairs(2, 9)
