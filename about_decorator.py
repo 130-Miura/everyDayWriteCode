@@ -32,3 +32,48 @@ text = 'test text'
 #     print(locals())
 # d()
 
+# デフォルト値を渡すと任意の引数(デフォルトパラメータ)、渡さないと必須の引数(必須パラメータ)となる
+# 必須の引数を関数呼び出し時に渡さないとTypeErrorが発生する
+# def f(x, y=None):
+#     print(x)
+# f(6)
+
+# pythonでは関数もオブジェクトのひとつでしかないので
+# 関数に引数として渡したり、関数の戻り値として使うことができる
+# def g():
+#     return 1
+
+# def h():
+#     return 2
+
+# def add(x, y):
+#     print(x + y)
+
+# add(g(), h())
+
+# def i(x):
+#     return x
+# print(i(h()))
+
+# この場合、y関数でreturnしていないため、fにはNoneが代入される
+# def j():
+#     x = 1
+#     def y(a):
+#         print(a)
+#     return y(x)
+# f = j()
+# # print(f.keys())
+# print(f)
+
+# デコレータは関数を引数にとり、新たな関数を返す関数
+# def k(some_func):
+#     def l():
+#         print('print test')
+#         ret = some_func()
+#         return ret + 1
+#     return l()
+# def m():
+#     return 1
+# n = k(m)
+# print(n)
+
