@@ -65,7 +65,9 @@ text = 'test text'
 # # print(f.keys())
 # print(f)
 
-# デコレータは関数を引数にとり、新たな関数を返す関数
+# デコレータは関数を引数にとり、新たな関数を返すcallable
+# callableとは引数をとって結果を返すオブジェクトの総称
+# function,class,method,generatorもcallable
 # def k(some_func):
 #     def l():
 #         print('print test')
