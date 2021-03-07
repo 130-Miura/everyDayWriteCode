@@ -44,3 +44,46 @@
 # a = MyClass()
 # del a
 
+# # インスタンスを暗黙的に文字列に変換する__str__()
+# class MyClass:
+#     def __init__(self, name, food):
+#         self.name = name
+#         self.food = food
+
+#     def __str__(self):
+#         return self.name + " like " + self.food
+
+# a = MyClass("Tarou", "sushi")
+# print(a)
+
+# サブクラスは継承元の親クラスの変数やメソッドを利用できる
+# 親クラスのメソッドのオーバーライドも可能
+# class MyClass:
+#     hello = "hello"
+
+# class MyClass2(MyClass):
+#     def __init__(self, world):
+#         self.world = world
+
+#     def greet(self):
+#         print(self.hello, self.world)
+
+# a = MyClass2("Japan")
+# a.greet()
+
+# super()を利用して親クラスの参照制限のかかったコンストラクタなどを参照可能
+class MyClass1(object):
+    def __init__(self):
+       self.val1 = 123
+
+class MyClass2(MyClass1):
+    def __init__(self):
+        super(MyClass2, self).__init__()
+        self.val2 = 456
+
+a = MyClass2()
+print(a.val1)
+print(a.val2)
+
+print(MyClass2.__dict__)
+print(a.__dict__)
