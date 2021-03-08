@@ -72,18 +72,48 @@
 # a.greet()
 
 # super()を利用して親クラスの参照制限のかかったコンストラクタなどを参照可能
-class MyClass1(object):
-    def __init__(self):
-       self.val1 = 123
+# class MyClass1(object):
+#     def __init__(self):
+#        self.val1 = 123
 
-class MyClass2(MyClass1):
-    def __init__(self):
-        super(MyClass2, self).__init__()
-        self.val2 = 456
+# class MyClass2(MyClass1):
+#     def __init__(self):
+#         super(MyClass2, self).__init__()
+#         self.val2 = 456
 
-a = MyClass2()
-print(a.val1)
-print(a.val2)
+# a = MyClass2()
+# print(a.val1)
+# print(a.val2)
 
-print(MyClass2.__dict__)
-print(a.__dict__)
+# print(MyClass2.__dict__)
+# print(a.__dict__)
+
+# python3系ではクラス定義時の()を省略できる
+# 省略して、class クラス名:　と書いた場合でも実際はトップレベル（ルートクラス）のobjectが引数に渡されている
+# class クラス名（object）:　と書いた場合と同じとなる
+# 全てのクラスはobjectを継承している
+# dir関数にオブジェクトを渡すとプロパティ名とメソッド名がリストで返ってくる
+
+# class Myclass:
+#     def __init__(self, a, b):
+#         self.x = a
+#         self.y = b
+
+#     def tasu(self):
+#         wa = self.x + self.y
+#         self.wa = wa
+#         return wa
+
+#     def hiku(self):
+#         sa = self.x - self.y
+#         self.sa = sa
+#         return sa
+
+# def tasizan(a, b):
+#     return a + b
+
+# print(dir(Myclass))
+# print('\n')
+# print(dir(Myclass(3, 2)))
+# print('\n')
+# print(dir(tasizan(3, 5)))
