@@ -117,3 +117,35 @@
 # print(dir(Myclass(3, 2)))
 # print('\n')
 # print(dir(tasizan(3, 5)))
+
+# pythonのスコープは以下の4種類
+# ローカルスコープ（関数の中）
+# エンクロージングスコープ（内部関数から見た外部関数の中）
+# グローバルスコープ（ファイルの中）、モジュールスコープ＝外部ファイルの中
+# ビルトインスコープ（組み込み関数の中、予約語とは別）
+
+# グローバルスコープ
+# g = 1
+
+# def a(b):
+#     # aのローカルスコープ
+#     # aaやaaaのエンクロージングスコープ
+#     c = 3
+
+    # def aa(bb):
+    #     def aaa(bbb):
+
+    #         # aaaのローカルスコープ
+    #         ccc = 333
+    #         print('this is aaa', locals())
+    #         print('c:', c, 'cc:', cc, 'g:', g, 'gg:', gg)
+    #     # aaのローカルスコープ
+    #     # aaaのエンクロージングスコープ
+    #     cc = 33
+    #     print('this is aa', locals())
+    #     aaa(222)
+    # print('this is a', locals())
+    # aa(22)
+
+# グローバルスコープ
+# gg = 11
