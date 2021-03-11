@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome to Vue</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script>
+  var app = new Vue({
+  // DOM要素を指し示すセレクタ
+  // idがappである要素がVueアプリケーションとして認識される
+  // elで指定された範囲外は処理しない
+  el: '#app',
+  // アプリケーション内で利用される変数
+  data: {
+    message: 'Hello Japan'
+  }
+})
+</script>
+
+</body>
+</html>
