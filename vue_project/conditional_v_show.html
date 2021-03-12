@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: .5rem 2%;
+        }
+
+        .container {
+            padding: .5rem 2%;
+        }
+
+        .tab {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            margin-bottom: 1rem;
+            padding: 0;
+        }
+
+        .tab-item+.tab-item {
+            margin-left: 1rem;
+        }
+
+        .tab-content {
+            background: #f1fafa;
+            padding: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- v_ifの場合、FalseならDOMから要素が削除される -->
+    <!-- v_showの場合、Falseなら要素のスタイルがdisplay:noneとなる -->
+    <div id="app">
+        <div class="container">
+            <h1>Welcome to Vue</h1>
+            <ul class="tab">
+                <li class="tab-item"><button>tab 1</button></li>
+                <li class="tab-item"><button>tab 2</button></li>
+                <li class="tab-item"><button>tab 3</button></li>
+            </ul>
+            <section class="tab-content" v-show="currentTab === 1">
+                <h2>Tab 1</h2>
+                <p>Lorem ipsum dolor sit amet, te sed dolor aliquam scripserit, ut blandit recteque ius, eripuit
+                    invenire ne duo.</p>
+            </section>
+            <section class="tab-content" v-show="currentTab === 2">
+                <h2>Tab 2</h2>
+                <p>At cum scripta admodum, ius habeo postea deterruisset ne, admodum oporteat eu vis. </p>
+            </section>
+            <section class="tab-content" v-show="currentTab === 3">
+                <h2>Tab 3</h2>
+                <p>Iuvaret efficiantur at est, eos alienum argumentum ei, nullam imperdiet ad sed.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                currentTab: 2
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
