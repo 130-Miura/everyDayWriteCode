@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+        padding: 1.2rem 2%;
+        }
+
+        .text {
+        padding: 1em;
+        border-radius: 4px;
+        background: #f2f2f2;
+        margin-bottom: 1rem;
+        }
+
+        .text-error {
+        color: red;
+        background: #feeeea;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1 class=title>Welcome to Vue</h1>
+            <p v-for="message in messages"
+                class="text"
+                :class="{ 'text-error': message.error }">
+            {{ message.text }}
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                messages: [
+                    { text: 'This is normal message.', error: false },
+                    { text: 'This is ERROR message!', error: true },
+                ]
+            }
+        })
+    </script>
+
+</body>
+
+</html>
