@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <style>
+        .container-fluid {
+        padding: 1rem 2%;
+        }
+
+        .table {
+        table-layout: fixed;
+        }
+
+        .table tr td {
+        vertical-align: middle;
+        }
+
+        .table tr td {
+        word-wrap: break-word;
+        }
+
+        input[type="file"] {
+        overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container-fluid">
+            <table class="table table-bordered">
+                <colgroup>
+                    <col class="w-50">
+                    <col class="w-50">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Form</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group mb-0">
+                                <label>Text</label>
+                                <!-- v-modelを指定した入力タグに入力された値がv-modelで指定した名前の変数に即座に反映される -->
+                                <!-- onChangeイベントを自動で実現してくれる -->
+                                <input v-model="message" type="text" class="form-control">
+                            </div>
+                        </td>
+                        <td>{{ message }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group mb-0">
+                                <label>Textarea</label>
+                                <textarea v-model="description" class="form-control"></textarea>
+                            </div>
+                        </td>
+                        <td>
+                            <pre class="mb-0">{{ description }}</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="form-group mb-0">
+                            <label>Select</label>
+                            <select v-model="framework" class="form-control">
+                              <option value="vue">Vue.js</option>
+                              <option value="react">React</option>
+                              <option value="angular">Angular</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>{{ framework }}</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group mb-0">
+                            <label>Checkbox</label>
+                            <p class="mb-1">
+                              <input v-model="tools.webpack"
+                                     type="checkbox"
+                                     id="check1">
+                              <label for="check1">Webpack</label>
+                            </p>
+                            <p class="mb-1">
+                              <input v-model="tools.babel"
+                                     type="checkbox"
+                                     id="check2">
+                              <label for="check2">Babel</label>
+                            </p>
+                            <p class="mb-0">
+                              <input v-model="tools.yarn"
+                                     type="checkbox"
+                                     id="check3">
+                              <label for="check3">Yarn</label>
+                            </p>
+                          </div>
+                        </td>
+                        <td><pre>{{ tools }}</pre></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group mb-0">
+                            <label>Checkbox 2</label>
+                            <p class="mb-1">
+                              <input v-model="foods"
+                                     type="checkbox"
+                                     id="check4"
+                                     value="🍕">
+                              <label for="check4">Pizza</label>
+                            </p>
+                            <p class="mb-1">
+                              <input v-model="foods"
+                                     type="checkbox"
+                                     id="check5"
+                                     value="🍩">
+                              <label for="check5">Donut</label>
+                            </p>
+                            <p class="mb-0">
+                              <input v-model="foods"
+                                     type="checkbox"
+                                     id="check6"
+                                     value="🍣">
+                              <label for="check6">Sushi</label>
+                            </p>
+                          </div>
+                        </td>
+                        <td>
+                          <span v-for="food in foods" class="mr-2">
+                            {{ food }}
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group mb-0">
+                            <label>Radio</label>
+                            <p class="mb-1">
+                              <input v-model="lang" type="radio" id="r1" value="js">
+                              <label for="r1">JS</label>
+                            </p>
+                            <p class="mb-1">
+                              <input v-model="lang" type="radio" id="r2" value="php">
+                              <label for="r2">PHP</label>
+                            </p>
+                            <p class="mb-0">
+                              <input v-model="lang" type="radio" id="r3" value="html">
+                              <label for="r3">HTML</label>
+                            </p>
+                          </div>
+                        </td>
+                        <td>{{ lang }}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'a',
+                description: 'This is textarea.',
+                framework: 'vue',
+                tools: { webpack: true, babel: false, yarn: false },
+                foods: ['🍩'],
+                lang: 'php'
+            }
+        })
+    </script>
+
+</body>
+
+</html>
