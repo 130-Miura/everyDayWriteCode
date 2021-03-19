@@ -35,6 +35,61 @@
         .tab-content h2 {
             line-height: 1.125rem;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: .3rem;
+        }
+
+        select,
+        textarea {
+            border: 1px solid #dedede;
+            border-radius: 4px;
+            display: block;
+            padding: .5rem .75rem;
+            width: 100%;
+        }
+
+        .form-content {
+            background: #f8f8f8;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        dt {
+            margin-bottom: .5rem;
+        }
+
+        dd {
+            margin: 0;
+        }
+
+        dd+dt {
+            margin-top: 1rem;
+        }
+
+        pre {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: .9rem;
+        }
     </style>
 </head>
 
@@ -76,6 +131,45 @@
         </div>
     </div>
 
+    <div id="app2">
+        <div class="container">
+            <h1>Vue Form Sample</h1>
+            <div class="form-content" v-if="submitted">
+                <h2>フォームが送信されました</h2>
+                <dl>
+                    <dt>満足度:</dt>
+                    <dd>{{ '⭐️'.repeat(rating) }}</dd>
+                    <dt>コメント:</dt>
+                    <dd>
+                        <pre>{{ comment }}</pre>
+                    </dd>
+                </dl>
+                <button type="button" @click.prevent="clearForm">
+                    クリア
+                </button>
+            </div>
+            <form @submit.prevent="onSubmit">
+                <div class="form-group">
+                    <label for="rating">満足度</label>
+                    <select id="rating" v-model="rating">
+                        <option value="0">No star</option>
+                        <option value="1">⭐️</option>
+                        <option value="2">⭐️⭐️</option>
+                        <option value="3">⭐️⭐️⭐️</option>
+                        <option value="4">⭐️⭐️⭐️⭐️</option>
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">コメント</label>
+                    <textarea id="comment" v-model="comment"></textarea>
+                    <p class="error-msg" v-if="error">{{ error }}</p>
+                </div>
+                <button type="submit">送信</button>
+            </form>
+        </div>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
@@ -103,6 +197,37 @@
             methods: {
                 toggle: function (tab) {
                     this.currentTab = tab
+                }
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                rating: 3,
+                comment: '',
+                error: '',
+                submitted: false
+            },
+            methods: {
+                onSubmit: function () {
+                    // 実際はここでWeb APIを叩いて
+                    // フォームの内容をサーバに送信するはず
+
+                    // dataの内容はthisからアクセスできる
+                    this.error = ''
+                    if (this.comment === '') {
+                        this.error = 'コメントは必須です。'
+                        return false
+                    }
+
+                    // フォームの内容を表示
+                    this.submitted = true
+                },
+                clearForm: function () {
+                    this.submitted = false
+                    this.rating = 3
+                    this.comment = ''
                 }
             }
         })
