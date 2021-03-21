@@ -34,9 +34,11 @@
             <label for="birthday">お誕生日は？</label>
             <input type="date" id="birthday" v-model="birthday">
 
+            <!-- マイナスの場合はfalseのため表示しない -->
             <p v-if="age >= 0">{{ age }} 歳ですね！</p>
             <p v-else>お誕生日を入力してください。</p>
 
+            <!--  -->
             <p v-if="isComputedCalled" class="message">
                 Computedが呼び出されました。
             </p>
@@ -63,12 +65,15 @@
                     // メッセージを表示
                     this.isComputedCalled = true
                     const that = this
+                    // 2秒後にisComputedCalledをfalseにしてメッセージを消す
                     setTimeout(function () {
                         that.isComputedCalled = false
-                    }, 2000) // 2秒後にメッセージが消えます
+                    }, 2000)
                 }
             },
             computed: {
+                // 参照プロパティのageは関数内部で参照しているプロパティ
+                // （今回の場合はbirthday）が変更された都度呼び出される
                 age: function () {
                     this.setMessage()
 
