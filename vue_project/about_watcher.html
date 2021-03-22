@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: .5rem 2% 1rem 2%;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        label small {
+            margin-left: .5rem;
+        }
+
+        input {
+            border: 1px solid #e9e9e9;
+            border-radius: 4px;
+            padding: .5rem;
+            width: 100%;
+        }
+
+        .error {
+            color: red;
+            font-size: .9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Vue.js Form Validation</h1>
+            <div class="form-group">
+                <label for="email">
+                    メールアドレス
+                    <small>※必須、半角英数のみ</small>
+                </label>
+                <input type="text" id="email" v-model="email">
+                <p class="error" v-if="error.email">{{ error.email }}</p>
+            </div>
+            <div class="form-group">
+                <label for="username">
+                    ユーザー名
+                    <small>※必須、半角英数のみ</small>
+                </label>
+                <input type="text" id="username" v-model="username">
+                <p class="error" v-if="error.username">{{ error.username }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                email: '',
+                username: '',
+                error: {}
+            },
+            watch: {
+                email: function (value) {
+                    if (value === '') {
+                        this.error.email = 'メールアドレスは必須です。'
+                    } else if (!/[a-zA-Z0-9@_]+/.test(value)) {
+                        this.error.email = 'メールアドレスは半角英数と「_ @」のみです。'
+                    } else {
+                        this.error.email = ''
+                    }
+                },
+                username: function (value) {
+                    if (value === '') {
+                        this.error.username = 'ユーザー名は必須です。'
+                    } else if (!/[a-zA-Z0-9]+/.test(value)) {
+                        this.error.username = 'ユーザー名は半角英数のみです。'
+                    } else {
+                        this.error.username = ''
+                    }
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
