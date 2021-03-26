@@ -21,15 +21,21 @@ import math
 # price int 金額
 # tax int 税金（％） 10%の場合省略可
 # return 課税後の価格（端数切り捨て）
-def add_tax(price, tax=10):
-    return price + price * tax // 100
-print(add_tax(102))
-print(add_tax(100, 8))
-print(add_tax(1200, 8))
-print(add_tax(1545))
+# def add_tax(price, tax=10):
+#     return price + price * tax // 100
+# print(add_tax(102))
+# print(add_tax(100, 8))
+# print(add_tax(1200, 8))
+# print(add_tax(1545))
+
+# l = lambda price, tax=10: price + price * tax // 100
+# print(l(102))
 
 
-def take_tax(price, tax=10):
-    return math.floor(price / (100 + tax) * 100)
-print(take_tax(1296, 8))
-print(take_tax(1700))
+# def take_tax(price, tax=10):
+#     return math.floor(price / (100 + tax) * 100)
+# print(take_tax(1296, 8))
+# print(take_tax(1700))
+
+# l = lambda price, tax=10: math.floor(price / (100 + tax) * 100)
+# print(l(1700))
