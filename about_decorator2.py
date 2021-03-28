@@ -47,18 +47,18 @@
 # 最初にd関数にtarouを渡すか、c関数 = d関数 とした後にtarouを渡すかの違い
 # print(c(d('tarou')))
 
-def adult(func):
-    def checker(name, age, action):
-        if age >= 20:
-            func(name, age, action)
-        else:
-            print(f'{name}は{age}歳なので、未成年のため{action}不可')
-    return checker
+# def adult(func):
+#     def checker(name, age, action):
+#         if age >= 20:
+#             func(name, age, action)
+#         else:
+#             print(f'{name}は{age}歳なので、未成年のため{action}不可')
+#     return checker
 
-@adult
-def action(name, age, action):
-    print(f'{name}は{age}歳なので、成人のため{action}可能')
+# @adult
+# def action(name, age, action):
+#     print(f'{name}は{age}歳なので、成人のため{action}可能')
 
-action('tarou', 22, '飲酒')
+# action('tarou', 22, '飲酒')
 
-action('yumi', 19, '喫煙')
+# action('yumi', 19, '喫煙')
