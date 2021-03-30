@@ -18,3 +18,25 @@
 # l = [a < 8, -6 < a, 7, not False, True, False]
 # if any(l):
 #     print('リスト内の要素(式の結果)のいずれかがTrue')
+
+# a = ['a', 'b', 2]
+# breakpoint()
+
+# 関数、メソッド、クラスは呼び出し可能
+# print(callable(list()))
+# print(callable(dict()))
+# print(callable('a'))
+# print(callable(3))
+# def a():
+#     pass
+
+# print(callable(a))
+# print(callable(a()))
+
+# class A:
+#     def b():
+#         pass
+
+# print(callable(A))
+# print(callable(A()))
+# print(callable(A.b))
