@@ -40,3 +40,8 @@
 # print(callable(A))
 # print(callable(A()))
 # print(callable(A.b))
+
+# chr() Unicodeコードポイントが指定した整数である文字列を返す
+# ord() 1文字のUnicode文字を表す文字列に対してUnicodeコードポイントを表す整数を返す
+# print(ord('a'))
+# print(chr(97))
