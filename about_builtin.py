@@ -62,3 +62,8 @@
 #     def b(self):
 #         print(self)
 # B.b('test')
+
+# print(dir())
+# import struct
+# print(dir())
+# print(dir(struct))
