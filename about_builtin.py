@@ -63,7 +63,14 @@
 #         print(self)
 # B.b('test')
 
+# dir()の引数がclassの時、メタ属性は含まれない
 # print(dir())
 # import struct
 # print(dir())
 # print(dir(struct))
+
+# l = ['one', 'two', 'three', 'four']
+# l = tuple(enumerate(l))
+# l = dict(enumerate(l))
+# l = list(enumerate(l))
+# print(l)
