@@ -74,3 +74,10 @@
 # l = dict(enumerate(l))
 # l = list(enumerate(l))
 # print(l)
+
+# divmod()
+# 第一引数と第二引数の商と剰余をタプルで返す
+# print(divmod(5, 3))
+# print(divmod(2.5, 2))
+# print(divmod(10.5, 3.2))
+
