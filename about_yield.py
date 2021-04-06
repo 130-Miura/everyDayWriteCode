@@ -48,3 +48,14 @@
 # print(next(x))
 # print(next(x))
 # print(next(x))
+
+# seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+# print(list(enumerate(seasons)))
+# print(list(enumerate(seasons, 1)))
+
+# l = enumerate(seasons)
+# print(l.__next__())
+# print(l.__next__())
+# print(l.__next__())
+# print(l.__next__())
+# print(l.__next__())
