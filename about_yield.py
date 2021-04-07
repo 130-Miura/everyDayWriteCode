@@ -59,3 +59,17 @@
 # print(l.__next__())
 # print(l.__next__())
 # print(l.__next__())
+
+# eval関数は引数に渡された文字列をpythonコードとして評価する
+# def func():
+#     print('func() is called')
+
+# global_val = 'this is global'
+
+# 通常のグローバル関数、変数呼び出し
+# func()
+# print(global_val)
+
+# 文字列からグローバル関数、変数呼び出し
+# eval('func')()
+# print(eval('global_val'))
