@@ -81,3 +81,54 @@
 # print(divmod(2.5, 2))
 # print(divmod(10.5, 3.2))
 
+
+# seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+# print(list(enumerate(seasons)))
+# print(list(enumerate(seasons, 1)))
+
+# l = enumerate(seasons)
+# print(l.__next__())
+# print(l.__next__())
+# print(l.__next__())
+# print(l.__next__())
+# print(l.__next__())
+
+# eval関数は引数に渡された文字列をpythonコードとして評価する
+# def func():
+#     print('func() is called')
+
+# global_val = 'this is global'
+
+# 通常のグローバル関数、変数呼び出し
+# func()
+# print(global_val)
+
+# 文字列からグローバル関数、変数呼び出し
+# eval('func')()
+# print(eval('global_val'))
+
+# evalは第一引数に渡した式を評価し、評価した結果を返す
+# execは第一引数に渡した文を評価し、Noneを返す（＝何も返さない）
+
+# これは文なのでエラー
+# eval('a = 3 + 2')
+
+# eval,execともに第二引数にグローバル、第三引数にローカルな名前空間を渡せる
+
+# eval('print(a)', {}, {'a': 2 + 3})
+# exec('print(a)', {'a': 2 + 3}, {})
+
+# evalは式の評価をするので名前空間の値を変更できない
+# execは名前空間の値を変更できる
+
+# a = {}
+# exec('b = 5', {}, a)
+# print(a)
+
+# filter関数は第一引数に関数、第二引数にiterableをとる。
+# 第二引数のiterableの値を順に関数の引数に渡して、Trueの場合のみ返す。
+# l = list(filter(lambda x: x > 10, [2, 50, 3, 100, 25]))
+# print(l)
+
+# l = list(filter(lambda x: False, [2, 3, 10, 2]))
+# print(l)
