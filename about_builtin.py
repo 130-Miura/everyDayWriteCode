@@ -136,4 +136,19 @@
 # formatメソッドで書式設定を行う
 # 置き換えフィールドを含む文字列.format(値, 値, 値...)
 # 複数の書式指定子がある
-print("名前は{2}です。年齢は{1}歳です。趣味は{0}です".format("tarou", 28, "ネットサーフィン"))
+# print("名前は{2}です。年齢は{1}歳です。趣味は{0}です".format("tarou", 28, "ネットサーフィン"))
+
+# 今日の日付を取得して、今日の日付を含んだファイル名を作成する
+# from datetime import datetime 
+# today = datetime.now().strftime("%Y%m%d")
+# year = datetime.now().strftime("%Y")
+# month = datetime.now().strftime("%m")
+# day = datetime.now().strftime("%d")
+# print(today)
+# print(year)
+# print(month)
+# print(day)
+# l = [year, month, day]
+
+# print("file_{}.txt".format(today))
+# print("file_{}_{}_{}.txt".format(year, month, day))
