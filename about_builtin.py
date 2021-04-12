@@ -152,3 +152,47 @@
 
 # print("file_{}.txt".format(today))
 # print("file_{}_{}_{}.txt".format(year, month, day))
+
+# setは変更可能、frozensetは変更不可能なセット
+# 要素は重複しない
+# 集合演算ができる
+# 要素に変更可能なオブジェクトは指定不可
+# a = set([1, 3, 5])
+# b = frozenset([1, 3, 5])
+# c = set()
+# d = frozenset()
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+
+# a = 3
+# b = set(a)
+# print(b)
+
+# a = set([1, 3, 5])
+# b = set([2, 3, 8])
+# c = set([1, 3, 5, 8])
+# d = set([1, 3])
+
+# 和集合
+# print(a | b)
+
+# 積集合
+# print(a & b)
+
+# 差集合
+# print(a - b)
+# print(b - a)
+
+# 対称差集合
+# print(a ^ b)
+
+# 部分集合か判定
+# print(a.issubset(b))
+# print(a.issubset(c))
+# print(a.issubset(d))
+
+# 上位集合か判定
+# print(a.issuperset(c))
+# print(a.issuperset(d))
