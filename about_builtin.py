@@ -196,3 +196,24 @@
 # 上位集合か判定
 # print(a.issuperset(c))
 # print(a.issuperset(d))
+
+# getattr(object,name[,default])
+# objectはクラス名、nameは取得する属性(変数)名、defaultは指定した属性が存在しなかった場合に返す値
+# class a:
+#     def __init__(self):
+#         self.x = 1
+#         self.y = 2
+#     def plus(self):
+#         return self.x + self.y
+#     def minus(self):
+#         return self.y - self.x
+#     def hello(self, z):
+#         return "hello " + z
+
+# b = a()
+# print(getattr(b, 'x'))
+# print(getattr(b, 'y'))
+# print(getattr(b, 'plus')())
+# print(getattr(b, 'minus')())
+# print(getattr(b, 'hello')('tarou'))
+
