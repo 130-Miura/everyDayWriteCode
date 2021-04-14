@@ -217,3 +217,21 @@
 # print(getattr(b, 'minus')())
 # print(getattr(b, 'hello')('tarou'))
 
+# getattrはオブジェクトの指定された属性の値を返す。
+# もしその属性が存在しない場合、AttributeErrorを返す。
+# hasattrはgetattrがAttributeErrorを返すかどうかを見て属性が存在するかどうかを返す関数。
+
+# b = a()
+# print(hasattr(b, 'x'))
+# print(hasattr(b, 'y'))
+# print(hasattr(b, 'plus'))
+# print(hasattr(b, 'minus'))
+# print(hasattr(b, 'hello'))
+
+# hash(object)はオブジェクトのハッシュ値を返す。
+# ハッシュ値は整数。辞書のキーを高速に検索する場合に使われる。
+# print(hash('abc'))
+# print(hash('abc'))
+# print(hash(123))
+# print(hash(123))
+# print(hash('bca'))
