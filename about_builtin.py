@@ -280,3 +280,14 @@
 #     return s + 'aaa'
 # a = list(map(b, ['tarou', 'jirou', 'saburou']))
 # print(a)
+
+# max()はイテラブルまたは2つ以上の引数のうち、最大のものを返す。
+# print(max([1, 7, 99]))
+# print(max(1, 7, 99))
+
+# open()はファイルを開く。ファイルが開けなければOSErrorを返す。
+# open('./example.txt', 'r')
+# with open('about_class.py', encoding='utf-8') as f:
+#     s = f.read()
+#     print(s)
+# open()が返すファイルオブジェクトの型はモードに依存する
