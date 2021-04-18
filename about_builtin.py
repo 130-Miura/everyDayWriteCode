@@ -291,3 +291,42 @@
 #     s = f.read()
 #     print(s)
 # open()が返すファイルオブジェクトの型はモードに依存する
+
+# Unicode文字を表す文字列⇔Unicodeコードポイントを表す整数の変換
+# print(chr(97))
+# print(ord('a'))
+
+# pow(base, exp[, mod])
+# baseのexp乗を返す
+# またはbaseのexp乗に対するmodの剰余を返す
+
+# pow(base, exp)とbase**expは等価だが、
+# pow(base, exp, mod)はpow(base, exp) % mod より効率よく計算される
+# print(pow(2, 3, 3))
+
+# print('これは', 'テスト', 'です')
+# print('これは', 'テスト', 'です', sep='')
+# print('これは', 'テスト', 'です', sep='', end=".")
+# print('これは', 'テスト', 'です', sep='', end=".")
+
+# class A:
+#     def __init__(self, x):
+#         self.x = x
+
+# @propertyを利用してsetterを利用しないと、参照のみの属性を作れる
+# a = A('test')
+# print(a.x)
+# a.x = 'tarou'
+# print(a.x)
+
+# class A(object):
+#     def __init__(self, x):
+#         self._x = x
+
+#     @property
+#     def x(self):
+#         return self._x
+
+# a = A('test')
+# print(a.x)
+# a.x = 'tarou'
