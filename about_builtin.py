@@ -330,3 +330,22 @@
 # a = A('test')
 # print(a.x)
 # a.x = 'tarou'
+
+# repr(object)はオブジェクトの印字可能な文字列を返す
+
+# reversed(sequence)はsequenceを逆順に返す
+# print(list(reversed([1, 6, 8, 10, 100])))
+
+# round(number[, ndigits])はnumberを小数部のndigits桁に丸めた値を返す
+# print(round(2.5516, 3))
+# print(round(2.5515, 3))
+# print(round(2.5514, 3))
+# print(round(2.5514))
+
+# slice(stop)
+# slice(start, stop[, step])
+# スライスオブジェクトを返す。スライスオブジェクトは単純に、引数に渡された値を返す。
+# サードパーティなどによる拡張などで使われている
+# print(slice(1, 18, 5))
+
+# sorted(iterable, *, key=None, reverse=False)はiterableを並び替えた新しいリストを返す。
