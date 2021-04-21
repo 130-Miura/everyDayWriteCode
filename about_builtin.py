@@ -356,5 +356,17 @@
 # クラス本体から関数を参照する必要があり、かつ、インスタンスメソッドに自動変換されるのを避けたい関数で使われる。
 
 # sum(iterable, start=0)はstartを初期値として、iterableを左から右に足した総和を返す。
+# 文字列のシーケンスを結合する、高速で望ましい方法は''.join(sequence)
+# 浮動小数点数値の加算はmath.fsum()
+# イテラブルの結合はitertools.chain()
 # print(sum([2, 5, 8], 5))
 # print(sum([2, 5, 8]))
+# a = ['tarou', 'jirou', 'saburou']
+# print(''.join(a))
+# b = ['sirou', 'gorou']
+# import itertools
+# print(list(itertools.chain(a, b)))
+
+# super()は親または兄弟クラスにメソッド呼び出しを委任するプロキシオブジェクトを返す。
+
+
