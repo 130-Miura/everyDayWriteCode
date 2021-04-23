@@ -383,3 +383,19 @@
 # 引数がなければvars()はlocals()と同じようにふるまう。
 # ただ、dict localsへの更新は無視されるので読み出し専用となる。
 
+# zip(*iterables)はそれぞれのiterableから集めた要素でイテレータを作る。
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# print(list(zip(a, b)))
+# print(tuple(zip(a, b)))
+# zipped = zip(a, b)
+# print(list(zip(*zipped)))
+# # print(zip(*[1, 2, 3] *5))
+# print([a, b]*5)
+# print(list(zip(*[a, b]*5)))
+
+# __import__(name, globals=None, locals=None, fromlist=(), level=0)
+# これはimport()から呼び出される。
+# nameモジュールをインポートし、globalsかlocalsがあればパッケージのコンテキストでnameをどう解釈するか決定するのに利用される。
+# formlistはnameモジュールからインポートするオブジェクトまたはサブモジュールを与える。
+# levelが0なら絶対インポートのみ実行する。levelの値が正なら、__import__を呼び出したディレクトリから検索対象の親の数を示す。
