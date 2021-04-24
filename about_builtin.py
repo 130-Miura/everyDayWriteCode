@@ -399,3 +399,12 @@
 # nameモジュールをインポートし、globalsかlocalsがあればパッケージのコンテキストでnameをどう解釈するか決定するのに利用される。
 # formlistはnameモジュールからインポートするオブジェクトまたはサブモジュールを与える。
 # levelが0なら絶対インポートのみ実行する。levelの値が正なら、__import__を呼び出したディレクトリから検索対象の親の数を示す。
+
+# print(True and False)
+# if True:
+#     print('a')
+# if True and False:
+#     print('b')
+# if (True and False):
+#     print('c')
+# print(True & False)
