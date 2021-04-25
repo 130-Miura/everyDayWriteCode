@@ -42,6 +42,34 @@ dt_now_jst_aware = datetime.datetime.now(datetime.timezone(datetime.timedelta(ho
 # print(dt_now_jst_aware)
 # print(dt_now)
 
+# タイムゾーン属性がNoneのnaiveなオブジェクトでutcの日時を取得
+dt_now_utc_native = datetime.datetime.utcnow()
+# print(dt_now_utc_native)
+
 # UTC時間を取得して9時間足した値を取得
 now = datetime.datetime.utcnow() + datetime.timedelta(hours=DIFF_JST_FROM_UTC)
 # print(now)
+
+# 今日の日付のdateオブジェクトを取得
+d_today = datetime.date.today()
+# print(d_today)
+# print(type(d_today))
+
+# dateオブジェクトはタイムゾーン属性を持たない。
+# タイムゾーンを設定したdateオブジェクトを取得したい場合、
+# datetimeオブジェクトにタイムゾーンを設定したうえでdateオブジェクトに変換する。
+d_tz_jst = dt_now_jst_aware.date()
+# print(dir(d_tz_jst))
+
+# awareオブジェクトとnaiveオブジェクト
+
+# awareオブジェクトはタイムゾーン情報を含んでいる。
+# そのためほかのdatetimeオブジェクトとの相対関係を特定できる。
+
+# naiveオブジェクトはタイムゾーン情報を含んでいない。
+# そのためほかのdatetimeオブジェクトとの相対関係を特定できない。
+
+# datetimeとtimeオブジェクトはタイムゾーン情報の属性（tzinfo）を追加できる。
+# tzinfoには抽象クラスtzinfoのサブクラスのインスタンスを設定できる。
+# tzinfoオブジェクトはUTC時間からのオフセット（基準時刻との差）やタイムゾーンの名前、
+# サマータイムが実施されるかどうかの情報を保持している。
