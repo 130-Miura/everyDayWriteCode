@@ -80,3 +80,4 @@ d_tz_jst = dt_now_jst_aware.date()
 # print(datetime.date(2019, 10, 3) - datetime.date(2020, 11, 30))
 # print(datetime.date(2019, 10, 3) + datetime.timedelta(days=424))
 # print(datetime.date(2019, 10, 3) + datetime.timedelta(hours=24))
+
