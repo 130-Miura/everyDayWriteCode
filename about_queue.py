@@ -51,3 +51,27 @@
 
 # Queue.get_nowait()
 # get(False)と同義
+
+import queue
+# q = queue.Queue()
+# q = queue.LifoQueue()
+# q = queue.PriorityQueue()
+
+# for i in range(5):
+#     q.put(i)
+#     q.put(3)
+
+# while not q.empty():
+#     a = q.get()
+#     print(a)
+
+# print(q.full())
+# print(not q.full())
+
+# q = queue.Queue(maxsize=2)
+# for i in range(1, 4):
+#     try:
+#         q.put(i, timeout=2)
+#     except queue.Full:
+#         print(i)
+
