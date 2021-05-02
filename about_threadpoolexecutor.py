@@ -71,7 +71,7 @@
 # ProcessPoolExecutor：プロセスプールを指定して非同期処理を行う
 # これらのサブクラスはExecutorクラスで定義された3つのメソッドが利用可能
 # submit(fn, *args, **kwargs)
-# 呼び出し可能オブジェクトfnをfn(*args, **kwargs)として実行するようにスケジュールし、
+# 呼び出し可能オブジェクトfnをfn(*args, **kwargs)として実行予定とし、
 # Futureオブジェクト（呼び出し可能オブジェクトfnの非同期実行をカプセル化したもの）を返す
 # map(func, *iterables, timeout=None, chunksize=1)
 # *iterablesの要素をひとつずつfuncの引数として渡して実行する
@@ -80,3 +80,5 @@
 # waitがTrueの場合、すべての未完了のFutureが完了してExecutorに関連づいたリソースが解放されるまで、このメソッドはreturnしない
 # waitがFalseの場合、このメソッドはすぐにreturnし、すべての未完了のFutureが実行完了したときに、Executorに関連づいたリソースが解放される
 # すべての未完了のFutureが実行完了するまでpythonプログラム全体は終了しない
+
+
