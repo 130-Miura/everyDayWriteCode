@@ -121,7 +121,4 @@ import time
 #     end = datetime.now()
 #     print(f"Time: {end - start}")
 
-# CPUバウンドな処理も、マルチプロセスで並列処理できる
-
-# import os
-# print(os.cpu_count())
+# CPUバウンドな処理はマルチプロセスで並列処理できる
