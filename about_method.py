@@ -48,3 +48,43 @@ inst = x_and_y(2, 8)
 # クラスメソッドもインスタンス化せず呼び出し可能。
 # メソッドの引数にオブジェクトを渡してインスタンス化可能（ファクトリメソッド）
 # print(Food.dislike_food(), 'が嫌いだ', sep='')
+
+# MRO(Method Resolution Order, メソッド解決順序)
+# クラス間の継承ツリーをもとに、次に呼び出すメソッドを特定する方法
+class class_A:
+    def method_a(self):
+        pass
+
+class class_B:
+    def method_b(self):
+        pass
+
+# A, Bの順で多重継承
+class class_C(class_A, class_B):
+    def method_c(self):
+        pass
+
+# B, Aの純で多重継承
+class class_D(class_B, class_A):
+    def method_d(self):
+        pass
+
+# print(class_C.mro())
+# C,A,B,objectの順でメソッド（オブジェクト？）を呼び出す
+
+# print(class_D.mro())
+# D,B,A,objectの順で呼び出す
+
+# バインドされていないオブジェクトなのでメソッドを呼び出せない
+# print(super(class_C))
+
+# バインドされたオブジェクトなのでメソッドを呼び出せる
+# print(super(class_C, class_C()).method_a)
+
+# バインドされてないオブジェクトはデスクリプタプロトコルとして利用可能
+# デスクリプタプロトコルとはオブジェクトがそれ以外のオブジェクトを返す仕組み
+class class_E(class_C):
+    # sup = class_C
+    sup = super(class_C)
+
+print(class_E().sup.method_a)
