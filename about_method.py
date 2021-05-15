@@ -83,8 +83,9 @@ class class_D(class_B, class_A):
 
 # バインドされてないオブジェクトはデスクリプタプロトコルとして利用可能
 # デスクリプタプロトコルとはオブジェクトがそれ以外のオブジェクトを返す仕組み
-class class_E(class_C):
-    # sup = class_C
-    sup = super(class_C)
+# class class_E(class_C):
+#     # sup = class_C
+#     sup = super(class_C)
 
-print(class_E().sup.method_a)
+# print(class_E().sup.method_a)
+
