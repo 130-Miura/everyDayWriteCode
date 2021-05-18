@@ -39,3 +39,18 @@ import math
 
 # l = lambda price, tax=10: math.floor(price / (100 + tax) * 100)
 # print(l(1700))
+
+sample_list = [7, 20, 2]
+l = lambda x, y: x * y
+for x, y in enumerate(sample_list, 1):
+    print(l(x, y))
+
+sample_dict = {}
+sample_list = ['a', 'b', 'c']
+for x, y in enumerate(sample_list):
+    sample_dict[x] = y
+print(sample_dict)
+
+sample_dict = {}
+for x, y in enumerate(sample_list):
+    sample_dict[y] = x
