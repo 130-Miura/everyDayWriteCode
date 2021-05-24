@@ -9,9 +9,10 @@ import math
 # print(math.factorial(4) // math.factorial(3) * math.factorial(4 - 3))
 
 # 
-def return_combination(n, r):
-    return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
+# def return_combination(n, r):
+#     return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
 
-print(return_combination(4, 3))
-print(return_combination(7, 3))
-print(return_combination(5, 2) * return_combination(2, 1))
+# print(return_combination(4, 3))
+# print(return_combination(7, 3))
+# print(return_combination(5, 2) * return_combination(2, 1))
+
