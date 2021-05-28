@@ -17,8 +17,10 @@ def sort_by_len(l):
     d = {}
     for s in l:
         d[s] = len(s)
-    # return max(d, key=d.get)
-    return min(d, key=d.get)
+    # return max(d.values())
+    # return min(d.items())
+    v, k = max((v, k) for k, v in d.items())
+    return (k, v)
 
 print(sort_by_len(l))
 
