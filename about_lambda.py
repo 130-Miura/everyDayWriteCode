@@ -54,3 +54,23 @@ import math
 # sample_dict = {}
 # for x, y in enumerate(sample_list):
 #     sample_dict[y] = x
+
+# l = lambda x, y, z: x **2 + y ** 3 + z **4
+# print(l(2, 5, 3))
+
+l = lambda x, base=2: x % base
+ll = lambda x, base=2: x // base
+bin_arr = []
+check_v = 14
+v = check_v
+for i in range(10):
+    remainder = l(v)
+    if i == 0:
+        print(v,remainder)
+        bin_arr.insert(0, remainder)
+    v = ll(v)
+    print(v,remainder)
+    bin_arr.insert(0, remainder)
+    if (remainder == 0 and v == 0) or (remainder == 1 and v == 1):
+        break
+print('10進数', check_v, 'を2進数に変換すると', *bin_arr, sep='')
