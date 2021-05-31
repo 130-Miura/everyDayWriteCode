@@ -7,6 +7,8 @@ def timedelta_to_int(td):
     h, mi = divmod(m, 60)
     return (h, mi)
 
+# 文字列「日にち 開始時間 終了時間」を受け取って
+# 文字列「日にち 開始時間 終了時間 勤務時間 日給」を返す
 def add_info_about_working_hours_and_daily_pay(line):
     d, s, e = line.split()
 
